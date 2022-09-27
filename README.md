@@ -5,7 +5,7 @@ This is a custom PyTorch implementation of a DDPM, based partly on HuggingFace's
 
 Let $\boldsymbol x_0\sim q(\boldsymbol x_0)$ denotes the data distribution. Define a $T$-step forward diffusion process as
 $$q(\boldsymbol x_t\mid\boldsymbol x_{t-1})=\mathcal N(\boldsymbol x_{t+1};\sqrt{1-\beta_t}\boldsymbol x_t,\beta_tI),$$
-with $\boldsymbol x_0$ being true data points and $t\in[\![1,T]\!]$. We expect that, after the transformation, $x_T\sim\mathcal N(\boldsymbol 0,I)$.
+with $\boldsymbol x_0$ being true data points and $t\in[![1,T]!]$. We expect that, after the transformation, $x_T\sim\mathcal N(\boldsymbol 0,I)$.
 
 Reparameterization gives
 $$q(\boldsymbol x_t\mid\boldsymbol x_0)=\mathcal N(\boldsymbol x_t;\sqrt{\bar\alpha_t}\boldsymbol x_0,(1-\bar\alpha_t)I),$$
