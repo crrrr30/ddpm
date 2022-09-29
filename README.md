@@ -19,3 +19,7 @@ $$\mu_\theta(\boldsymbol x_t,t)=\frac1{\sqrt{\alpha_t}}\left(\boldsymbol x_t-\fr
 $\boldsymbol\epsilon_\theta$ can then be approximated with a neural network that has objective
 $$L(\theta)\coloneqq\mathbb E[\Vert\boldsymbol\epsilon-\boldsymbol\epsilon_\theta(\boldsymbol x_t,t)\Vert^2]=\mathbb E[\Vert\boldsymbol\epsilon-\boldsymbol\epsilon_\theta(\sqrt{\bar\alpha_t}\boldsymbol x_0+\sqrt{1-\bar\alpha_t}\boldsymbol\epsilon,t)\Vert^2]$$
 over $t\sim\mathrm{Uniform}[\\![1,\cdots,T]\\!]$, $\boldsymbol\epsilon\sim\mathcal N(\boldsymbol 0,I)$, and $x_0\sim q(\boldsymbol x_0)$.
+
+With reparameterization, we can also sample explicitly from $p_\theta(\boldsymbol x_{t-1}\mid\boldsymbol x)$:
+$$\boldsymbol x_{t-1}=\frac1{\sqrt{\alpha_t}}\left(\boldsymbol x_t-\frac{1-\alpha t}{\sqrt{1-\bar\alpha_t}}\boldsymbol\epsilon_\theta(\boldsymbol x_t,t)\right)+\sqrt{\tilde\beta_t}\cdot\boldsymbol z,$$
+where $\boldsymbol z\sim\mathcal N(\boldsymbol0,I)$. Note that $\boldsymbol z$ should be set to $\boldsymbol 0$ when $t=1$.
