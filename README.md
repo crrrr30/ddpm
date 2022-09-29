@@ -9,7 +9,7 @@ with $\boldsymbol x_0$ being true data points and $t\in[\\![1,\cdots,T]\\!]$. We
 
 Reparameterization gives
 $$q(\boldsymbol x_t\mid\boldsymbol x_0)=\mathcal N(\boldsymbol x_t;\sqrt{\bar\alpha_t}\boldsymbol x_0,(1-\bar\alpha_t)I),$$
-where $\bar\alpha_t=\prod_{i=1}^t\alpha_i$ and $\alpha_t=1-\beta_t$.
+where $\bar\alpha_t=\prod^t_{i=1}\alpha_i$ and $\alpha_t=1-\beta_t$.
 
 If $x_T\sim\mathcal N(\boldsymbol 0,I)$, then fitting a reverse transform $p_\theta(\boldsymbol x_t\mid x_{t-1})$ allows us to generate samples starting from Gaussian noise.
 
