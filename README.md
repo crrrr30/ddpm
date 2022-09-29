@@ -18,4 +18,4 @@ $$\mu_\theta(\boldsymbol x_t,t)=\frac1{\sqrt{\alpha_t}}\left(\boldsymbol x_t-\fr
 
 $\boldsymbol\epsilon_\theta$ can then be approximated with a neural network that has objective
 $$L(\theta)\coloneqq\mathbb E[\Vert\boldsymbol\epsilon-\boldsymbol\epsilon_\theta(\boldsymbol x_t,t)\Vert^2]=\mathbb E[\Vert\boldsymbol\epsilon-\boldsymbol\epsilon_\theta(\sqrt{\bar\alpha_t}\boldsymbol x_0+\sqrt{1-\bar\alpha_t}\boldsymbol\epsilon,t)\Vert^2]$$
-over $t\sim\mathrm{Uniform}\\{1,\cdots,T\\}$, $\boldsymbol\epsilon\sim\mathcal N(\boldsymbol 0,I)$, and $x_0\sim q(\boldsymbol x_0)$.
+over $t\sim\mathrm{Uniform}[\\![1,\cdots,T]\\!]$, $\boldsymbol\epsilon\sim\mathcal N(\boldsymbol 0,I)$, and $x_0\sim q(\boldsymbol x_0)$.
